@@ -1,8 +1,9 @@
 import types from '../action-types';
 
 /**
- *  Send request
+ *  sentRequest
  *  @type action creator
+ *  @description dispatched whenever an http request is sent
  */
 export const sentRequest = () => {
   return {
@@ -11,8 +12,9 @@ export const sentRequest = () => {
 };
 
 /**
- *  Receive response
+ *  receivedResponse
  *  @type action creator
+ *  @description dispatched whenever an http response is received
  */
 export const receivedResponse = () => {
   return {

@@ -1,5 +1,4 @@
 {
   "appName": "Default App Name",
-  "loadingDelay": 1000,
-  "fixedHeader": true
+  "loadingDelay": 1000
 }

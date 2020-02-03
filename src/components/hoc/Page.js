@@ -10,21 +10,55 @@ import config from '../../constants/config';
 import { getCurrentRoute } from '../../utils';
 
 /**
- *  Props types
+ *
+ *  PROP TYPES
+ *
  */
 const propTypes = {
+  /**
+   *  title
+   *  @type string
+   *  @description the page's meta title
+   */
   title: PropTypes.string,
+
+  /**
+   *  description
+   *  @type string
+   *  @description the page's meta description
+   */
   description: PropTypes.string,
+
+  /**
+   *  classes
+   *  @type array[string]
+   *  @description additional classes that can be added to <body>
+   */
   classes: PropTypes.shape([PropTypes.string])
 };
 
+/**
+ *
+ *  DEFAULT PROPS
+ *
+ */
 const defaultProps = {
   title: '',
   description: '',
   classes: []
 };
 
-const Page = ({ title, description, classes }) => {
+/**
+ *
+ *  COMPONENT
+ *
+ */
+const Page = ({ title, description, classes, children }) => {
+  /**
+   *  Location api
+   */
+  const location = useLocation();
+
   /**
    *  State
    */
@@ -43,7 +77,7 @@ const Page = ({ title, description, classes }) => {
     setTimeout(() => {
       setShow(true);
     }, 0);
-    setCurrentRoute(getCurrentRoute(useLocation()));
+    setCurrentRoute(getCurrentRoute(location));
   }, [location, setCurrentRoute]);
 
   /**
@@ -64,6 +98,11 @@ const Page = ({ title, description, classes }) => {
   );
 };
 
+/**
+ *
+ *  STATIC ASSIGNMENT
+ *
+ */
 Page.propTypes = propTypes;
 Page.defaultProps = defaultProps;
 

@@ -1,58 +1,32 @@
-import { AnyAction } from 'redux';
-
 import types from '../action-types';
-import { IAppState } from '.';
 
 /**
  *  Initial state
  */
-// export const initialState: IAppState = {
-//   loading: true,
-//   settings: null,
-//   pages: null,
-//   navigations: null,
-//   settingsLoaded: false
-// };
+const initialState = {
+  pending: true
+};
 
 export const appReducer = (state = initialState, action) => {
   /**
-   *  Destructure data from payload
+   *  Destructured props
    */
   const { type, payload } = action;
-
   switch (type) {
     /**
-     *  Settings success
-     */
-    case types.GET_SETTINGS_SUCCESS:
-      return { ...state, settings: payload };
-
-    /**
-     *  Settings laoded
-     */
-    case types.SETTINGS_LOADED:
-      return { ...state, settingsLoaded: true };
-
-    /**
-     *  Send request
-     */
-    case types.GET_DATA_SUCCESS:
-      return { ...state, ...payload };
-
-    /**
-     *  Send request
+     *  Sent request
      */
     case types.SENT_REQUEST:
-      return { ...state, loading: true };
+      return { ...state, pending: true };
 
     /**
-     *  Loaded
+     *  Recieved response
      */
     case types.RECEIVED_RESPONSE:
-      return { ...state, loading: false };
+      return { ...state, pending: false };
 
     /**
-     *  Default
+     *  Default state
      */
     default:
       return state;

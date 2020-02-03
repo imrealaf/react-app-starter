@@ -1,12 +1,8 @@
 import React from 'react';
-import { Button, Container, Modal } from 'react-bootstrap';
 
-import { Page } from '../hoc/Page';
+import { Page } from '../hoc';
 
 const Home = () => {
-  /*
-   *  Render
-   */
   return <Page title='Home'>Home page</Page>;
 };
 

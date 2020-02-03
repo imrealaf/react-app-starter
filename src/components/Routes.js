@@ -9,7 +9,7 @@ const Routes = () => {
     <Switch>
       {/**
        * Home
-       * @route /
+       * @path /
        * @access public
        */}
       <Route exact={true} path={routes.HOME} component={Home} />
