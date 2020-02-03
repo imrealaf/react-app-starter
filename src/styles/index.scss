@@ -1,0 +1,13 @@
+/**
+ *  Index
+ *
+ *  @desc the root file for all styles in the app
+ */
+
+// Vendor
+@import "vendor";
+
+// App
+@import "global";
+@import "utilities";
+@import "abstract/buttons";

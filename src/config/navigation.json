@@ -1,0 +1,14 @@
+{
+  "default": {
+    "shadow": true,
+    "bg": "primary",
+    "logoType": "onPrimaryBg"
+  },
+  "special": {
+    "shadow": false,
+    "scrollTrigger": ".hero_container",
+    "bgTriggered": "black",
+    "transparent": false,
+    "triggerOffset": 30
+  }
+}

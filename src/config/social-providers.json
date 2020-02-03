@@ -1,0 +1,14 @@
+[
+  {
+    "id": "facebook",
+    "icon": "facebook-f",
+    "title": "Facebook",
+    "path": "/auth/facebook/callback"
+  },
+  {
+    "id": "google",
+    "icon": "google",
+    "title": "Google",
+    "path": "/auth/google/callback"
+  }
+]
